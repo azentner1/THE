@@ -1,8 +1,6 @@
-package com.the.app.common.repo
+package com.the.app.feature.main.repo.location
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.liveData
-import com.the.app.common.model.LocationData
+import com.the.app.feature.main.data.location.LocationDataSource
 import javax.inject.Inject
 
 class LocationRepository @Inject constructor(
@@ -17,7 +15,5 @@ class LocationRepository @Inject constructor(
         locationDataSource.initLocationUpdates()
     }
 
-    suspend fun onLocationChanged() = liveData {
-        emitSource(locationDataSource.onLocationChanged())
-    }
+    fun onLocationChanged() = locationDataSource.onLocationChanged()
 }
