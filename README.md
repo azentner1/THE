@@ -1,2 +1,5 @@
 # THE
-Broke Git flow as i did everything in one go. 
+Control the video with sensors! 
+
+#
+Small project to play around with different sensors on Android.
